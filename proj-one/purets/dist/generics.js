@@ -21,3 +21,20 @@ const identityProduct = (products) => {
 const identityFive = (products) => {
     return products;
 };
+function anotherFunction(key, val) {
+    let dataContent = {
+        key,
+        val
+    };
+    console.log(dataContent);
+    return dataContent;
+}
+anotherFunction(3, { connection: 'firebase', username: 'solmon', password: 'bee' });
+class sellAble {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}

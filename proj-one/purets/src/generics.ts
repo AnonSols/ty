@@ -33,3 +33,40 @@ const identityProduct = <t> (products: t[]): t[]=> {
 const identityFive = <T> (products: Array<T>): T[] => {
     return products;
 }
+
+function anotherFunction <T, U extends Database> (key:T, val:U): object {
+   let dataContent = {
+    key, 
+    val
+   }
+   console.log(dataContent)
+   return dataContent
+}
+
+anotherFunction(3, {connection: 'firebase', username: 'solmon', password: 'bee'})
+
+
+interface Database {
+    connection: string,
+    username: string,
+    password: string,
+}
+
+interface Quiz {
+    name: string,
+    type: string,
+}
+
+interface Course {
+    name: string,
+    author: string,
+    subject: string,
+}
+
+class sellAble<T> {
+    public cart: T[] = []
+
+    addToCart(product: T) {
+        this.cart.push(product)
+    }
+}
